@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>分析了2017年快递数据，我们绕到繁荣背后</title>
+    <!-- 引入 echarts.js -->
+    <!-- 这里是加载刚下好的echarts.min.js，注意路径 -->
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+<header>
+        <p class="title" style="font-size:50px">分析了2017年快递数据，</p>
+        <p class="title" style="font-size:70px">我们绕到繁荣背后</p>
+      
+    </header>
+    <div class="toc"></div>
+    <article>
+        <p>11月22日和23日，中通、申通快递公司官微分别发布《告客户书》，称“配合专项行动期间，北京地区的快件中转与寄递时效将会受到一定影响”。“专项行动”指北京大兴区11.18火灾两天后，北京市安全生产委员会以“厂房库房”“仓储物流”为重点的安全隐患排查整治行动。</p>
+        <p>未来的几天里，在遭遇了快递延迟、淘宝无法发货等糟糕经历后，我们才突然发现，不知何时已习惯于快递业发展带来的便利，却很少意识到，现在的我们几乎离不开快递。</p>
+        <p>邮政业是国家重要的社会公共事业，随着移动网络的普及与网购的发展，人们的日常生活中越来越离不开它。在市场经济发展和世界经济一体化进程日益加速的今天，中国邮政业面临着前所未有的发展机遇，也面临着更加严峻的挑战。</p>
+        <br>
+        <h2>蓬勃发展的快递业</h2>
+        <br>
+        <div>
+        <img src="assets/images/全国快递业概况.png" alt="2017年我国快递业概况" class="index-compare">
+        <br>
+        <p>根据国家邮政局公布的数据显示，2017年1-11月份，邮政行业业务收入（不包括邮政储蓄银行直接营业收入）累计完成5968.8亿元，同比增长23.4%；业务总量累计完成8749.6亿元，同比增长32.3%。</p>
+        </div>
+        <p>1-11月，全国快递服务企业业务量累计完成358.6亿件，同比增长28.6%；业务收入累计完成4437.4亿元，同比增长25.2%。</p>
+        <br>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<<<<<<< HEAD:再试一次.html
+    <div id="schedule-provinces" class="chart" style="height:400px;"></div>
+    <script src="echarts.min.js"></script>
+    <script src="assets/maps/china.js"></script>
+=======
+   <div id="schedule-provinces" class="chart" style="height:400px;align-text:center;"></div>
+	<script src="echarts.min.js"></script>
+	<script src="assets/maps/china.js"></script>
+>>>>>>> 5342eca8faf9a3e343a323952e8a73495316c882:index.html
+            <script type="text/javascript">
+    var chartScheduleProvinces = echarts.init(document.getElementById('schedule-provinces'));
+
+var optionScheduleProvinces = {
+    title: {
+        text: '2017年全国各省快递业务量（单位：万件）',
+        subtext: '不包括港澳台',
+        top: 'top',
+        left: 'center'
+<<<<<<< HEAD:再试一次.html
+    },
+        tooltip: {
+        formatter: '{b}: {c}'
+    },
+=======
+    },
+        tooltip: {
+        formatter: '{b}: {c}'
+    },
+>>>>>>> 5342eca8faf9a3e343a323952e8a73495316c882:index.html
+    visualMap: {
+        type: 'continuous',
+        min: 0,
+        max: 920000,
+        calculable: true,
+        realtime: false,
+        color: ['#006edd', '#e0ffff']
+    },
+    series: [
+<<<<<<< HEAD:再试一次.html
+        {
+=======
+        {align
+>>>>>>> 5342eca8faf9a3e343a323952e8a73495316c882:index.html
+            name: '全国各省快递运量',
+            type: 'map',
+            map: 'china',
+            data:[
+                {name: '北京',value:'204429.5'},
+                {name: '天津',value:'45843.3'},
+                {name: '上海',value: '279773.8'},
+                {name: '重庆',value: '29445.6'},
+                {name: '河北',value:'106042.5'},
+                {name: '河南',value: '96165.2'},
+                {name: '云南',value: '20443.7'},
+                {name: '辽宁',value: '45574.6'},
+                {name: '黑龙江',value:'20544.7'},
+                {name: '湖南',value: '52770.5'},
+                {name: '安徽',value: '77297.4'},
+                {name: '山东',value: '135026.8'},
+                {name: '新疆',value: '8166.2'},
+                {name: '江苏',value: '322031.2'},
+                {name: '浙江',value: '702494'},
+                {name: '江西',value: '38741.3'},
+                {name: '湖北',value: '91861.7'},
+                {name: '广西',value: '28212.8'},
+                {name: '甘肃',value: '6479.3'},
+                {name: '山西',value: '21872.7'},
+                {name: '内蒙古',value:'9790.3'},
+                {name: '陕西',value: '41059.4'},
+                {name: '吉林',value: '15576.8'},
+                {name: '福建',value: '148795.7'},
+                {name: '贵州',value: '14057.5'},
+                {name: '广东',value: '913208.3'},
+                {name: '青海',value: '1304.5'},
+                {name: '西藏',value: '505.9'},
+                {name: '四川',value: '99165.9'},
+                {name: '宁夏',value: '3351.9'},
+                {name: '海南',value: '5331.1'},
+                ]
+        }
+    ]
+};
+
+chartScheduleProvinces.setOption(optionScheduleProvinces);
+
+<<<<<<< HEAD:再试一次.html
+    </script>
+=======
+>>>>>>> 5342eca8faf9a3e343a323952e8a73495316c882:index.html
+    </script>
+    <br>
+    <img src="assets/images/词频图.png" alt="2017年全国业务量地区词频图" class="index-compare" style="text-align:right;">
+    <br>
+    <p>1-11月，东、中、西部地区快递业务量比重分别为81.1%、11.6%和7.3%，业务收入比重分别为80.9%、10.8%和8.3%。我国东部地区快递业较发达，其中江浙沪粤表现更为突出。</p>
+    <br>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="qian25" class="chart" style="width: 600px;height:400px;text-align: center;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('qian25'));
+        option = {
+    title : {
+        text: '2017年我国快递业务量前25位城市情况',
+        subtext: '单位（万件）',
+        top: 'top',
+        left: 'center'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['快递业务量'],
+        bottom: 'bottom',
+        left: 'center'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['广州','上海','深圳','金华','杭州','北京','东莞','苏州','成都','泉州','温州','武汉','南京','宁波','揭阳','台州','天津','郑州','无锡','嘉兴','汕头','合肥','佛山','石家庄','西安']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'快递业务量',
+            type:'bar',
+            data:['354940.7', '279773.8', '234596.4', '223906.8', '206469.3', '204429.5', '110583.4', '92439.1', '74170.5', '66599', '64517.1', '64438.4','57011.7','56929.8','52678.2','48239.9','45843.3','44178.1','40709.4','35665.4','35257.6','35065.9','34710.3','31525.7','30630.2'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+       
+    ]
+};
+ myChart.setOption(option);
+
+    </script>
+    <br>
+    <img src="assets/images/快递包裹.png" class="index-compare">
+    <p style="color:gray;font-size:15px;text-align:right;">数据来源：国家邮政局统计数据</p>
+    <br>
+    <p>1-11月全国大陆主要城市包裹数量，全国共计3585554万件，同比增长28.6%。除西藏外快递包裹数量都由同比增长数额，其中四川、贵州等同比增长超过40%。</p>
+        <p>总体而言，我国目前快递业业务规模逐渐增长，效益呈逐步递增的态势。网络建设加强，结构、功能优化，快递网点分布范围更广，目前，国家邮政服务网络以实物处理网为节点，以干线运输和支线运输为连接，以营业网和投递网为终端，以信息网为支撑组成。网络内部按功能划分存在三个业务处理网：普通邮件网、快递（航空）邮件网，物流集散网，由此也进一步带动各省市的快递业务量逐步增加。</p>
+        <br>
+        <h2>繁荣背后</h2>
+        <br>
+        <p>然而，当我们绕到高速发展的繁荣背后，方兴未艾的快递业也存在很多问题。巨大的快递量也带来巨大的快递包装消耗，由此产生的快递垃圾如何处理成为社会亟待解决的难题。</p>
+        <p>除了可以回收的纸箱、一部分塑料袋之外，大部分快递包装都被当做人们的生活垃圾处理。塑料快递包装混在生活垃圾中，焚烧过程中对锅炉炉壁产生结焦，进行清洁炉壁会增加很大工作量。同时焚烧垃圾用炉原本可用5年，这样混合在一起焚烧只能用3年，每年增加成本300万。除此之外，这些被当做垃圾处理的塑料包装大多是由价格便宜、使用广泛的低密度聚乙烯构成，其中含有塑化剂、阻燃剂等有害物质，焚烧会产生二噁英，对大气污染也有一定影响。</p>
+        <br>
+        <img src="assets/images/快递垃圾.png" class="index-compare">
+        <br>
+        <br>
+        <br>
+         <div id="baozhuang" class="chart" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('baozhuang'));
+        option = {
+    title : {
+        text: '快递包装类别数量统计',
+        subtext: '2015-2017年（单位：亿个）',
+        top: 'top',
+        left: 'center'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['2015年','2016年','2017年'],
+        bottom: 'bottom',
+        left: 'center'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            data : ['快递运单数量','编织袋','塑料袋','包装箱']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value'
+        }
+    ],
+    series : [
+        {
+            name:'2015年',
+            type:'bar',
+            data:['139.6','20','55.84','67'],
+        },
+        {
+            name:'2016年',
+            type:'bar',
+            data:['207','31','82.68','41.91'],
+        },
+        {
+            name:'2017年',
+            type:'bar',
+            data:['312.8','32','147','37'],
+        },
+    ]
+};
+myChart.setOption(option);
+
+    </script>
+    <p style="color:gray;font-size:15px;text-align:right;">数据来源：《2015中国快递领域绿色包装发展现状及趋势报告》</p>
+    <p style="color:gray;font-size:15px;text-align:right;">《2016中国快递领域绿色包装发展现状及趋势报告》</p>
+    <p style="color:gray;font-size:15px;text-align:right;">《2017中国快递领域绿色包装发展现状及趋势报告》</p>
+
+    <p>北京印刷学院青岛研究院副院长朱磊表示，中国包装垃圾的总体回收率小于20%，其中纸盒只有不到一半被回收。而快递包装中的填充物、胶带等塑料成分，回收率几乎为零。菜鸟网络的数据亦显示，去年我国非环保快递袋的使用量是83亿个，仅2015年胶带长度可以绕地球赤道425圈。每年排放的二氧化碳多达2000万吨-3000万吨。</p>
+        <br>
+        <img src="assets/images/包装浪费.png" class="index-compare">
+        <br>
+        <p>另一方面，由于业务规模快速扩大、行业迅速扩张，大量良莠不齐的快递公司涌入业界，快递业又缺乏完善的行业规范，侵犯消费者权益的负面事件常有发生。2016年11月至2017年10月，月均快递申诉件数为140179.5件，申诉最多的月份可达218465件。快递服务申诉中，排名前三的问题是“投递服务”、“延误”和“快件丢失短少”。然而，受理的有效申诉中，问题解决率很低，仅为14.94%。</p>
+        <br>
+        <img src="assets/images/投诉概况.png" class="index-compare">
+        <br>
+        <div id="youzheng" class="chart" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('youzheng'));
+        option = {
+    title : {
+        text: '邮件服务申诉（单位：件）',
+        subtext: '2016年11月-2017年10月',
+        top: 'top',
+        left: 'center'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['申诉件数'],
+        bottom: 'bottom',
+        left: 'center'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'value',
+            boundaryGap : [0, 0.01]
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            data : ['投递服务','邮件延误','邮件丢失短少','邮件损毁','收集服务','违规收费','其他']
+        }
+    ],
+    series : [
+        {
+            name:'申诉件数',
+            type:'bar',
+            data:['8380', '4578', '3047', '968', '545', '39','25'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            }
+        },
+    ]
+};
+myChart.setOption(option);
+
+    </script>
+    <br>
+    <div id="kuaidi" class="chart" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('kuaidi'));
+option = {
+    title : {
+        text: '快递服务申诉（单位：件）',
+        subtext: '2016年11月-2017年10月',
+        top: 'top',
+        left: 'center'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['申诉件数'],
+        bottom: 'bottom',
+        left: 'center'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'value',
+            boundaryGap : [0, 0.01]
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            data : ['投递服务','邮件延误','邮件丢失短少','邮件损毁','收集服务','违规收费','代收货款','其他']
+        }
+    ],
+    series : [
+        {
+            name:'申诉件数',
+            type:'bar',
+            data:['90934', '76001', '48240', '20755', '6016', '1757','1068','696'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            }
+        },
+    ]
+};
+myChart.setOption(option);
+
+    </script>
+    <br>
+<div id="tousulv" class="chart" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('tousulv'));
+        option = {
+    title : {
+        text: '主要快递企业有效申诉率节选',
+        subtext: '2016年11月-2017年10月  单位：有效申诉数/百万件快件',
+        top: 'top',
+        left: 'center'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['全峰快递','国通','京东','苏宁易购','中通','申通'],
+        bottom: 'bottom',
+        left: 'center'
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType : {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'category',
+            boundaryGap : false,
+            data : ['16年11月','16年12月','17年1月','17年2月','17年3月','17年4月','17年5月','17年6月','17年7月','17年8月','17年9月','17年10月']
+        }
+    ],
+    yAxis : [
+        {
+            type : 'value',
+            axisLabel : {
+                formatter: '{value} '
+            }
+        }
+    ],
+    series : [
+        {
+            name:'全峰快递',
+            type:'line',
+            data:['37.2','21.7','43.32','37.98','33.14','19.05','23.23','23.06','38.61','28.3','42.73','50.4'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+         {
+            name:'国通',
+            type:'line',
+            data:['25.87','52.86','38.4','27.61','33.64','22.82','27.2','20.71','21.32','24.86','24.49','27.07'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+         {
+            name:'京东',
+            type:'line',
+            data:['1.03','1.09','1.11','0.86','0.42','0.62','0.69','1.81','2.92','0.96','0.98','0.98'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+         {
+            name:'苏宁易购',
+            type:'line',
+            data:['0.13','0.05','0.06','0.08','0.07','0.06','0.07','0.08','0.07','0.04','0.05','0.06'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+         {
+            name:'中通',
+            type:'line',
+            data:['2.9','9.12','6.94','6.41','3.28','2.3','1.79','1.93','1.38','1.14','1.33','1.77'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name: '平均值'}
+                ]
+            }
+        },
+        {
+            name:'申通',
+            type:'line',
+            data:['10.52','31.41','30.57','22.71','14.92','6.51','6.53','7.52','9.75','9.65','7.89','10.93'],
+            markPoint : {
+                data : [
+                    {type : 'max', name: '最大值'},
+                    {type : 'min', name: '最小值'}
+                ]
+            },
+            markLine : {
+                data : [
+                    {type : 'average', name : '平均值'}
+                ]
+            }
+        }
+    ]
+};
+myChart.setOption(option);
+
+    </script>
+    </script>
+    <br>
+    <br>
+    <img src="assets/images/投诉排名.png" class="index-compare">
+    <br>
+        <p>在主要快递企业中，苏宁易购、京东等电商自营快递品牌运营良好，确定为企业责任的申诉案件较少且稳定，少有物流快递公司能达到其水平。</p>
+        <br>
+        <h2>站在岔口上</h2>
+        <br>
+        <p>北京市11月20日起执行的安全隐患排查整治活动，也指向快速扩张的快递业行业规范缺失的另一个方面：快递网点、物流仓库管理粗放，存在安全隐患。为期40天的安全隐患大排查、大清理、大整治专项行动，在为快递业带来突如其来的凛冬的同时，也倒逼快递行业在井喷式的发展中停下脚步，做精做优，实现跨越式转型升级。</p>
+        <div id="beijing" class="chart" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('beijing'));
+
+option = {
+    title : {
+        text: '北京市各区快递网点分布情况',
+        subtext: '单位/个',
+        top: 'top',
+        left: 'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{b}: {c}"
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : false,
+    series : [
+        {
+            name:'矩形图',
+            type:'treemap',
+            roam:false,
+            visibleMin: 300,
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: true,
+                        formatter: "{b}"
+                    },
+                    borderWidth: 1
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }
+                }
+            },
+            data:[
+                {
+                    name: '西城区',
+                    value: '1196'
+                },
+                {
+                    name: '朝阳区',
+                    value: '908'
+                },
+                {
+                    name: '海淀区',
+                    value: '527'
+                },
+                {
+                    name: '丰台区',
+                    value: '394'
+                },
+                {
+                    name: '大兴区',
+                    value: '324'
+                },
+                {
+                    name: '通州区',
+                    value: '296'
+                },
+                {
+                    name: '昌平区',
+                    value: '291'
+                },
+                 {
+                    name: '东城区',
+                    value: '264'
+                },
+                {
+                    name: '顺义区',
+                    value: '233'
+                },
+                {
+                    name: '房山区',
+                    value: '130'
+                },
+                {
+                    name: '石景山区',
+                    value: '76'
+                },
+                {
+                    name: '怀柔区',
+                    value: '58'
+                },
+                {
+                    name: '平谷区',
+                    value: '49'
+                },
+                {
+                    name: '门头沟区',
+                    value: '43'
+                },
+                {
+                    name: '延庆县',
+                    value: '36'
+                },
+                {
+                    name: '密云县',
+                    value: '28'
+                },
+
+
+            ]
+        }
+    ]
+};
+  myChart.setOption(option);
+
+    </script>
+    <br>
+    <p>国家邮政局评价快递业发展时说：“我们不搞粗放的大跃进，要搞质效的大提升。”快递企业更加重视人才、更加重视技术、更加重视末端，这原本是业界的未来方向，却因一次意外而置于公众关注之下，愈发显得迫在眉睫。</p>
+    <p>现代社会，快递已成为一种生活方式，细密的快递网，如同奔流在钢铁森林中的血管，将城市与城市紧密相连，维持着共同的呼吸。我们每个人都身处这张网里，通过快递网的末梢与各地相连。快递业的健康、繁荣发展，与每个人息息相关。</p>
+    </article>
+</body>
+</html>                  
